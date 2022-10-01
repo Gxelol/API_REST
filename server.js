@@ -1,3 +1,8 @@
-import sayHello from './app';
+import app from './app';
 
-sayHello();
+const port = 3001;
+app.listen(port, () => {
+  console.log();
+  console.log(`Listening in port ${port}`);
+  console.log();
+});
