@@ -8,11 +8,12 @@ import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
+//router.get('/', loginRequired, userController.index); HAS NO USE, DID JUST TO SEE HOW IT WORKS
+//router.get('/:id', userController.show);
+
 router.post('/', userController.store); //userController.create makes the same
-router.get('/', loginRequired, userController.index);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+router.put('/', loginRequired, userController.update);
+router.delete('/', loginRequired, userController.delete);
 
 export default router;
 
