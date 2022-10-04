@@ -3,7 +3,11 @@ import userController from '../controllers/User';
 
 const router = new Router();
 
-router.post('/', userController.store); //userController.store makes the same
+router.post('/', userController.store); //userController.create makes the same
+router.get('/', userController.index);
+router.get('/:id', userController.show);
+router.put('/:id', userController.update);
+router.delete('/:id', userController.delete);
 
 export default router;
 
