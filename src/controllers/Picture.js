@@ -16,8 +16,8 @@ class PictureController {
 
       try {
         const { originalname, filename } = req.file;
-        const { aluno_id } = req.body;
-        const picture = await Picture.create({ originalname, filename, aluno_id });
+        const { student_id } = req.body;
+        const picture = await Picture.create({ originalname, filename, student_id });
 
         return res.json(picture);
       } catch (e) {
