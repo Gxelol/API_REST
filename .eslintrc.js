@@ -17,5 +17,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'spaced-comment': 'off',
     'no-empty-function': 'off',
+    camelcase: 'off',
   },
 };
